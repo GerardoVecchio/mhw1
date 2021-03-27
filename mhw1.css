@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;  /*distacca le lettere di tot px l'una dall'altra*/
+    cursor: default;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+}
+.menu,a{
+    font-weight: 300;
+    font-size: 14px;
+    color: red;
+    text-decoration: none;
+}
+header{
+    background-color: white;
+    background-image:url("https://i.imgur.com/H3uLxUF.jpg");
+    background-size:cover;
+    background-position: center;
+    height: 800px;
+    position: relative;
+    margin: 10px;
+    margin-top: 90px;
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+header h1{
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: normal;
+    text-align: center;
+    z-index: 1; /*sta sopra l'immagine*/
+}
+
+header h1 a{
+    font-size: 0.5em;
+}
+
+h1 a.button{
+    padding: 5px 40px;
+    border-radius: 100px;
+    background-color: red;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Roboto Mono',sans-serif;
+    letter-spacing: 2px;   
+}
+
+
+
+h1 a.button:hover{
+    background-color: white;
+    color:red;
+}
+
+nav{
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    left: 10px;
+    overflow: hidden;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.5 em;
+    padding: 15px;
+    z-index: 2;
+    border: 3px solid red;
+    border-top: none;
+    border-bottom-left-radius: 30px ;
+    border-bottom-right-radius: 30px;
+    font-family: 'Roboto Mono',sans-serif;
+    letter-spacing: 2px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu a.button{
+    justify-content: space-around;
+    padding: 15px 15px;
+    border: 2px solid red;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu a.button:hover{
+    background-color: white;
+    color:red;
+}
+
+/*contenuti*/
+body{
+    background-color: lightgray;
+}
+section.dad{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(83, 86, 90, 0.2);
+    border-radius: 30px;
+}
+
+section.half{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+}
+
+.boxa{
+    margin: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px black;
+}
+.boxa h3{
+    color: black;
+    font-family: Verdana, sans-serif;
+}
+
+.boxa img{
+    border-radius: 30px;
+}
+
+.boxb{
+    display: flex;
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 30px;   
+    box-shadow: 3px 3px 5px black;
+    flex-shrink: auto;
+}
+
+.boxb h3{
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+/*altra sezione*/
+footer{
+    margin-top: 10px;
+    padding: 25px;
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 3px solid red;
+    border-bottom: none;
+}
+
+/*finestra laterale*/
+
+label{
+    position: fixed;
+    top: 0px;
+    right: -120px;
+    width: 140px;
+    height: 100vh;
+    padding: 20px 5px 20px 20px;
+    background-color:white ;
+    border-radius: 30px;
+    border:3px solid red;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    z-index: 3;
+}
+.slpwrap{
+    margin-bottom: 25px;
+}
+
+label, #check{
+     display: none;
+}
+
+label:checked, label:hover{
+    right: -20px;
+}
+
+a.button{
+    padding: 3px;
+    border:2px solid red;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+@media (max-width:1320px){
+    header {
+        height: 800px;
+        line-height: 1.2;
+        margin-top: 0px;
+    }
+}
+@media (min-width:769px)and (max-width: 1150px){
+
+    section.dad{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .boxa img{
+        width: 100%;
+        margin: 0%;
+    }
+}
+@media (max-width: 768px){
+
+    header {
+        height: 300px;
+        line-height: 1.2;
+        margin-top: 0px;
+    }
+
+    section.dad{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .boxa img{
+        width: 100%;
+        margin: 0%;
+    }
+
+    nav, .logo{
+        display: none;
+    }
+
+    label{
+        display: initial;
+    }
+}
